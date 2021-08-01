@@ -29,17 +29,19 @@ We calculated the distance of each coordinate using the Euclidean distance techn
 #### NNC CLUSTERING METHOD
     # distance = 88
     
-    def clustering(iterable, clustered_arr, temparr, distance):
+    def clustering(iterable, temparr, distance):
         prev = None
         group = []
         for item in iterable:
             if not prev or euclidean(item, prev) <= distance:
-                temparr.append(group)
+                if group not in temparr:
+                    temparr.append(group)
                 group.append(item)
             else:
                 yield group
                 group = [item]
-                temparr.append(group)
+                if group not in temparr:
+                    temparr.append(group)
             prev = item
         if group:
             yield group
