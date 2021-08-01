@@ -15,7 +15,7 @@ I thought of NNC algorithm while analyzing Sunspots. I got the coordinate value(
 ![Z004](https://user-images.githubusercontent.com/87653966/127765464-b0ae0a5e-9f79-4857-9784-0e7470e23236.png)
 
 
-#### EUCLIEAN DISTANCE
+#### EUCLIDEAN DISTANCE
 We calculated the distance of each coordinate using the Euclidean distance technique. Because NNC techniques work based on the distance of each coordinates, it is important to calculate the distance. In other words, if the distance from this cluster to other cluster is farther than a certain value, it is judged as a different cluster, and if it is close, it is judged as the same cluster.
 
     def euclidean(x1, x2):
